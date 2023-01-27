@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<!--
+Created by Kerrington and Cameron
+Responsive Web Design, taught by Steve Monk
+NBCC Saint John, IT: Programmer Analyst 
+Due on Friday, December 13th, 2021
+-->
+<head>
+
+    <title>Mad for Madagascar</title>
+    <meta charset="utf-8">
+
+    <!-- Responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JS Link -->
+    <script src="script.js"></script>
+
+    <!-- Google font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="container-fluid p-0">
+
+    <!--------------------------------- Header and Navigation System --------------------------------->
+    
+    <!-- Image Carousel Header -->
+    <div id="headerCarousel" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Menu Sidebar for offcanvas XS, SM, MD -->
+        <div class="offcanvas offcanvas-start d-block d-lg-none" id="menu">
+            <div class="offcanvas-header">
+                <h1 class="offcanvas-title">Menu</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <a href="index.html"><div>Home</div></a>
+                <a href="content1.html"><div>General Info</div></a>
+                <a href="content2.html"><div>Climate</div></a>
+                <a href="content3.html"><div>History</div></a>
+                <a href="content4.html"><div>Culture & Economy</div></a>
+                <a href="content5.html"><div>Places to See</div></a>
+                <a href="references.html"><div>References</div></a>
+            </div>
+        </div>
+
+        <!-- Carousel Images -->
+        <div class="carousel-inner container-fluid p-0">
+
+            <!-- Open Menu Button -->
+            <div class="container-fluid mt-3 d-block d-lg-none" id="menuButton">
+                <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu">
+                    <!-- Hamburger style menu icon -->
+                    <div class="hamburgerIcon"></div>
+                    <div class="hamburgerIcon"></div>
+                    <div class="hamburgerIcon"></div>
+                </button>
+            </div>
+
+            <!-- Logo -->
+            <div id="logo">
+                <img src="Images/mad_for_madagascar_solid.png" alt="Mad for Madagascar Logo">
+            </div>
+
+            <!-- Picture 1 -->
+            <div class="carousel-item active">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="Images/baobab_widescreen.jpg">
+                    <img src="Images/baobab.jpg" alt="Baobab Trees" class="d-block w-100">
+                </picture>
+            </div>
+            <!-- Picture 2 -->
+            <div class="carousel-item">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="Images/madagascar_cliffside_widescreen.jpg">
+                    <img src="Images/madagascar_cliffside.jpg" alt="Cliffside in Madagascar" class="d-block w-100">
+                </picture>
+            </div>
+            <!-- Picture 3 -->
+            <div class="carousel-item">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="Images/madagascar_coast_widescreen.jpg">
+                    <img src="Images/madagascar_coast.jpg" alt="Madagascar Coastline" class="d-block w-100">
+                </picture>
+            </div>
+        </div>
+    
+    </div>
+    <!--------------------------------- Header and Navigation System End --------------------------------->
+
+    
+    <!--------------------------------- Page content --------------------------------->
+    <div id="bodyContent" class="container-fluid">
+        
+        <div class="row">
+
+            <!-- Menu Sidebar for oncanvas LG -->
+            <div class="d-none d-lg-block col-lg-3 col-xl-2 p-3" id="menu">
+                <div class="header">
+                    <h2 class="title">Menu</h2>
+                </div>
+                <div class="pt-2">
+                    <a href="index.html"><div>Home</div></a>
+                    <a href="content1.html"><div>General Info</div></a>
+                    <a href="content2.html"><div>Climate</div></a>
+                    <a href="content3.html"><div>History</div></a>
+                    <a href="content4.html"><div>Culture & Economy</div></a>
+                    <a href="content5.html"><div>Places to See</div></a>
+                    <a href="references.html"><div>References</div></a>
+                </div>
+            </div>
+
+            <!--------------------------------- Vertical Tabs --------------------------------->
+            <div class="col-md-6 col-lg-5 p-3" id="climate">
+                <h2>Climate in Madagascar</h2>
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab">Climate</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" data-bs-toggle="tooltip" data-bs-placement="top" title="Click me!">Wildlife</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab">Plants</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="pills-tabContent">
+
+                    <!-- Tab -->
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel">
+
+                        <!-- Text -->
+                        <div>
+                            Although there are variations around different parts of the 
+                            country, the climate is generally quite warm throughout 
+                            the year because of its position relative to the equator and 
+                            because of the kinds of ocean currents its surrounded by.
+                            Being located below the equator, Madagascar has its summers 
+                            from November to March and winters from May to October.
+                        </div>
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#image-modal1" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to enlarge">
+                            <picture>
+                                <source media="(min-width: 576px)" srcset="Images/climate_large.jpg">
+                                <img src="Images/climate_small.jpg" alt="Climate zones in Madagascar" id="climate-img" class="pt-3">
+                            </picture>
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="image-modal1" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="Images/climate_large.jpg" alt="Climate zones in Madagascar" id="climate-img-modal" class="pt-3">
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Tab -->
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel">
+
+                        <!-- Text -->
+                        <div>
+                            Because of how Madagascar split from the african continent 88 million years ago, 
+                            Madagascar is home to many organisms that aren't found anywhere else in the world.
+                            This makes Madagascar very unique and a hotspot for studying ecology.
+                            Approximately 90% of all plant and animal species found in Madagascar are "endemic"
+                            meaning they are found only in Madagascar and nowhere else in the world.
+                        </div>
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#image-modal2" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to enlarge">
+                            <img src="Images/madagascar_animals.jpg" alt="Animals that only exist in Madagascar" id="climate-img">
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="image-modal2" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="Images/madagascar_animals.jpg" alt="Animals that only exist in Madagascar" id="climate-img-modal">
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Tab -->
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel">
+
+                        <!-- Text -->
+                        <div>
+                            More than 80 percent of Madagascar's 14,883 plant species are found nowhere else in the world, 
+                            including five plant families. One of these five, the Didiereaceae family, composed of four genera and 11 species, 
+                            is limited to the spiny forests of southwestern Madagascar.
+                            Madagascar is also host to 6 of 9 types of Baobab trees in the world and its "Avenue of the Baobabs" 
+                            is one of Madagascar's most prominent tourist attractions.
+                        </div>
+                        <img src="Images/plants.png" alt="Plants in Madagascar" id="climate-img">
+                    </div>
+
+                </div>
+
+            </div>
+            <!--------------------------------- Vertical Tabs End --------------------------------->
+
+            <div class="container-fluid col-md-6 col-lg-4 col-xl-5 p-3">
+
+                <!--------------------------------- Accordion Animals --------------------------------->
+
+                <!-- Accordion Lemur -->
+                <div class="accordion" id="animal">
+                    <h2>Madagascar Exclusive Species</h2>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="animal-heading1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
+                                Lemur
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#animal">
+                            <div class="accordion-body">
+                                <p>
+                                Lemurs are primates that look like an animal in between a dog, a cat and a squirrel 
+                                that have incredibly unique and exciting behaviors that include singing like a whale. 
+                                There are more than thirty species of lemurs in Madagascar today that vary in size 
+                                from the 25 grams pygmy lemur to the largest Indri Lemur weighing more than 12 kgs. 
+                                Lemurs are one of the most threatened animals in the whole planet and according to 
+                                IUCN Red List of Threatened Species, 22 species of lemurs are critically endangered, 
+                                48 are endangered, while 20 are vulnerable.
+                                </p>
+                                <picture class="pt-3">
+                                    <source media="(min-width: 992px)" srcset="Images/lemur.jpg">
+                                    <img src="Images/lemur.jpg" alt="Lemur in trees">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Fossa -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="animal-heading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo">
+                            Fossa
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#animal">
+                            <div class="accordion-body">
+                                <p>
+                                The fossa inhabits the forests of Madagascar and are close relatives of the mongoose. 
+                                They grow to a length of 6 ft (1.8 m) from the tail to the nose and weigh up to 26 
+                                pounds (12 kgs). The animal has a slender body and appears more like a cat with 
+                                little resemblance to their relative mongoose. The fossa uses it long tail like a 
+                                tightrope walking pole to move swiftly through trees.
+                                </p>                            
+                                <picture class="pt-3">
+                                    <source media="(min-width: 992px)" srcset="Images/fossa.jpg">
+                                    <img src="Images/fossa.jpg" alt="Fossa animal">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Frog -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="animal-heading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree">
+                                Tomato Frog
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#animal">
+                            <div class="accordion-body">
+                                <p>
+                                Tomato frogs are found only in Madagascar, mainly in the northwestern region of the 
+                                island and are chiefly terrestrial, living in the forested areas. Due to 
+                                deforestation, their habitat has been destroyed but seemingly they adapt well to the 
+                                cultivated areas, and they are common in gardens. They are brightly colored and ooze 
+                                off some white sticky mucus when threatened, though they are not toxic, they are 
+                                irritating to the mucous membrane.
+                                </p>                             
+                                <picture class="pt-3">
+                                    <source media="(min-width: 992px)" srcset="Images/frog.jpg">
+                                    <img src="Images/frog.jpg" alt="Tomato frog">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Chameleon -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="animal-heading4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour">
+                                Panther Chameleon
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#animal">
+                            <div class="accordion-body">
+                                <p>
+                                The panther chameleon is native to Madagascar and has been introduced to other 
+                                islands in the surroundings. It is one of the most colorful with widest color 
+                                variations of all the chameleons, they are also larger and the most sought after by 
+                                reptile keepers and traders. Like other Chameleons, panther chameleon has a bony 
+                                extension on the rear part of its head called the casque. It hunts and traps its pray 
+                                using its extensile tongue that has specialized muscles that propels the tongue to 
+                                snare by use of sticky mucus and vacuum created by the muscles at the tip of the tongue.
+                                </p>                                
+                                <picture class="pt-3">
+                                    <source media="(min-width: 992px)" srcset="Images/chameleon.jpg">
+                                    <img src="Images/chameleon.jpg" alt="Panther Chameleon">
+                                </picture>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!--------------------------------- Accordian Animals End --------------------------------->
+
+            </div> 
+
+            <!--------------------------------- Geography --------------------------------->
+
+            <div class="container-fluid row">
+                
+                <div id="geography-text">
+                    <h2>Geography</h2>
+                    <p>
+                    <!-- Button trigger modal -->
+                    <button id="topography" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#geography" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to enlarge">
+                        <img src="Images/madagascar_topography.jpg" alt="Topographical map of Madagascar" id="climate-img" class="pt-3">
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="geography" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="Images/madagascar_topography.jpg" alt="Topographical map of Madagascar" id="climate-img-modal" class="pt-3">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    Madagascar can be divided into five general geographical regions: the east coast, the 
+                    Tsaratanana Massif, the Central Highlands, the west coast, and the southwest. The highest 
+                    elevations parallel the east coast.
+                    <h5 class="mt-2">East coast</h5>
+                    The east coast consists of a narrow band of lowlands about fifty kilometers wide, 
+                    formed from the sedimentation of alluvial soils, and an intermediate zone composed of 
+                    steep bluffs alternating with ravines bordering an escarpment of about 500 metres 
+                    (1,640 ft) in elevation, which gives access to the Central Highlands. The coastal 
+                    region roughly from north of Baie d'Antongil, the most prominent feature on the 
+                    Masoala Peninsula, to the far north of the island. The coastline is straight, with 
+                    the exception of a bay, offering less in the way of natural harbors than the west 
+                    coast.
+                    <h5 class="mt-2">Tsaratanana Massif</h5>
+                    The Tsaratanana Massif region at the north end of the island contains, at 2,880 
+                    metres, the highest point on the island. Further north is the Montagne d'Ambre, which 
+                    is of volcanic origin. The coastline is deeply indented; two prominent features are 
+                    the natural harbor at Antsiranana, just south of the Cap d'Ambre, and the large 
+                    island of Nosy Be to the west. The mountainous topography of the Tsaratanana Massif 
+                    limits the potential of the port at Antsiranana by impeding the flow of traffic from 
+                    other parts of the island.
+                    <h5 class="mt-2">Central Highlands</h5>
+                    The Central Highlands, which range from 800 to 1,800m in altitude, contain a wide 
+                    variety of topographies: rounded and eroded hills, massive granite outcrops, extinct 
+                    volcanoes, eroded peneplains, and alluvial plains and marshes, which have been 
+                    converted into irrigated rice fields. The Central Highlands extend from the 
+                    Tsaratanana Massif in the north to the Ivakoany Massif in the south. They are defined 
+                    rather clearly by the escarpments along the east coast, and they slope gently to the 
+                    west coast.
+                    <h5 class="mt-2">West Coast</h5>
+                    The west coast, composed of sedimentary formations, is more indented than the east 
+                    coast, thus offering a number of harbors sheltered from cyclones, such as the harbor 
+                    at Mahajanga. Deep bays and well-protected harbors have attracted explorers, traders, 
+                    and pirates from Europe, Africa, and the Middle East since ancient times; thus, the 
+                    area has served as an important bridge between Madagascar and the outside world. 
+                    Silting up of harbors on this coast, caused by sediment from the high levels 
+                    erosion suffered inland in Madagascar, is a major problem.
+                    <h5 class="mt-2">Southwest</h5>
+                    The southwest is bordered on the east by the Ivakoany Massif and on the north by the 
+                    Isala Roiniforme Massif. It includes two regions along the south coast, the Mahafaly 
+                    Plateau and the desert region occupied by the Antandroy people.
+                    
+                </div>
+
+            </div>
+
+            <!--------------------------------- More Climate Information --------------------------------->
+
+            <div class="container-fluid">
+                <h2>More on Climate</h2>
+                <h5>Winter/Dry Season</h5>
+                <p>
+                During the dry winter months of April through early September, the days are warm, but 
+                the nights can become very cold! Although it is the dryer season, you can expect some 
+                rainfall during the beginning of our itinerary when we explore the rain forests of the east coast.
+                Many travelers think that, because they are traveling to Africa, it will most likely 
+                be warm. This is not the case at night and early morning from May through September—
+                particularly in June, July and August. The nights and early mornings can be chilly 
+                (possibly near freezing), so we recommend bringing warm layers you can “peel” off as 
+                it warms up throughout the day. A warm jacket or fleece pullover is perfect.
+                </p>
+                <h5>Summer/Green Season</h5>
+                <p>
+                Late September through April is a much warmer period, and you will need fewer warm 
+                clothes, although you can still expect cooler temperatures in Ranomafana and 
+                Andasibe-Mantadia at night and early in the morning. We still recommend layers during 
+                this time.
+                </p>
+                <h5>Regional Climate Differences</h5>
+                <p>
+                As part of the Hauts-Plateaux, Andasibe-Mantadia and Ranomafana are cooler than other 
+                parts of the country, and the forest is humid, damp and under a thick overhead canopy 
+                that shades the forest floor.
+                Isalo National Park is typically sunny, hot and dry during our walks and pleasant in 
+                the evenings (it can even be quite hot at night in October and November). Zombitse-
+                Vohibasia National Park on the west coast is drier than either the east coast or the 
+                central highlands because the trade winds lose their humidity by the time they reach 
+                this region. The southwest and the extreme south are semidesert.
+                Anjajavy, nestled along the Mozambican Channel, is not as dry, and the summer months 
+                can be very hot, possibly reaching into the 100s°F.
+                Sunscreen, a wide-brimmed hat, sunglasses and lightweight clothing are essential for 
+                the second half of this adventure.                    
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!--------------------------------- Page Content End --------------------------------->
+
+    <!--------------------------------- Footer --------------------------------->
+    <div id="footer" class="container-fluid d-flex flex-row justify-content-evenly mt-3 m-0 p-3">
+        <div>Created by Kerrington & Cameron</div>
+        <div class="d-none d-md-block">
+            <nav>
+                <ul class="pagination pagination-sm align-self">
+                    <li class="page-item"><a class="page-link" href="index.html">Home</a></li>
+                    <li class="page-item"><a class="page-link" href="content1.html">1</a></li>
+                    <li class="page-item"><a class="page-link" href="content2.html">2</a></li>
+                    <li class="page-item"><a class="page-link" href="content3.html">3</a></li>
+                    <li class="page-item"><a class="page-link" href="content4.html">4</a></li>
+                    <li class="page-item"><a class="page-link" href="content5.html">5</a></li>
+                    <li class="page-item"><a class="page-link" href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div>Responsive Web Design - 13/12/21</div>
+    </div>
+    <!--------------------------------- Footer End --------------------------------->
+
+</div>
+</body>
+
+</html>

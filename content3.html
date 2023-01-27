@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<!--
+Created by Kerrington and Cameron
+Responsive Web Design, taught by Steve Monk
+NBCC Saint John, IT: Programmer Analyst 
+Due on Friday, December 13th, 2021
+-->
+<head>
+
+    <title>Mad for Madagascar</title>
+    <meta charset="utf-8">
+
+    <!-- Responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JS Link -->
+    <script src="script.js"></script>
+
+    <!-- Google font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="container-fluid p-0">
+
+    <!--------------------------------- Header and navigation system --------------------------------->
+    
+    <!-- Image Carousel Header -->
+    <div id="headerCarousel" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Menu Sidebar for offcanvas XS, SM, MD -->
+        <div class="offcanvas offcanvas-start d-block d-lg-none" id="menu">
+            <div class="offcanvas-header">
+                <h1 class="offcanvas-title">Menu</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <a href="index.html"><div>Home</div></a>
+                <a href="content1.html"><div>General Info</div></a>
+                <a href="content2.html"><div>Climate</div></a>
+                <a href="content3.html"><div>History</div></a>
+                <a href="content4.html"><div>Culture & Economy</div></a>
+                <a href="content5.html"><div>Places to See</div></a>
+                <a href="references.html"><div>References</div></a>
+            </div>
+        </div>
+
+        <!-- Carousel Images -->
+        <div class="carousel-inner container-fluid p-0">
+
+            <!-- Open Menu Button -->
+            <div class="container-fluid mt-3 d-block d-lg-none" id="menuButton">
+                <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu">
+                    <!-- Hamburger style menu icon -->
+                    <div class="hamburgerIcon"></div>
+                    <div class="hamburgerIcon"></div>
+                    <div class="hamburgerIcon"></div>
+                </button>
+            </div>
+
+            <!-- Logo -->
+            <div id="logo">
+                <img src="Images/mad_for_madagascar_solid.png" alt="Mad for Madagascar Logo">
+            </div>
+
+            <!-- Picture 1 -->
+            <div class="carousel-item active">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="Images/baobab_widescreen.jpg">
+                    <img src="Images/baobab.jpg" alt="Baobab Trees" class="d-block w-100">
+                </picture>
+            </div>
+            <!-- Picture 2 -->
+            <div class="carousel-item">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="Images/madagascar_cliffside_widescreen.jpg">
+                    <img src="Images/madagascar_cliffside.jpg" alt="Cliffside in Madagascar" class="d-block w-100">
+                </picture>
+            </div>
+            <!-- Picture 3 -->
+            <div class="carousel-item">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="Images/madagascar_coast_widescreen.jpg">
+                    <img src="Images/madagascar_coast.jpg" alt="Madagascar Coastline" class="d-block w-100">
+                </picture>
+            </div>
+        </div>
+    
+    </div>
+
+    <!--------------------------------- Page content --------------------------------->
+    <div id="bodyContent" class="container-fluid">
+        
+        <div class="row">
+
+            <!-- Menu Sidebar for oncanvas LG -->
+            <div class="d-none d-lg-block col-lg-3 col-xl-2 p-3" id="menu">
+                <div class="header">
+                    <h2 class="title">Menu</h2>
+                </div>
+                <div class="pt-2">
+                    <a href="index.html"><div>Home</div></a>
+                    <a href="content1.html"><div>General Info</div></a>
+                    <a href="content2.html"><div>Climate</div></a>
+                    <a href="content3.html"><div>History</div></a>
+                    <a href="content4.html"><div>Culture & Economy</div></a>
+                    <a href="content5.html"><div>Places to See</div></a>
+                    <a href="references.html"><div>References</div></a>
+                </div>
+            </div>
+
+            <!--------------------------------- Vertical Tabs --------------------------------->
+            <div class="col-md-6 col-lg-5 p-3" id="history">
+                <h2>History of Madagascar</h2>
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab">Settlement</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab">Early History</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab">Modern Madagascar</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="pills-tabContent">
+
+                    <!-- Tab -->
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel">
+
+                        <!-- Text -->
+                        <div>
+                            Madagascar was first settled by humans about 2000 years ago. Madagascar's settlers were either Indonesians or people of mixed Indonesian/African descent. Arab traders arrived on the scene around 800-900 A.D. when merchants begin trading along the northern coast. The first known European to see Madagascar was a Portuguese sea captain, <a href="#" id="tooltip" data-toggle="tooltip" data-placement="top" title="Also known as Diogo Gomes.">Diogo Dias</a>, who spotted the island August 10, 1500, after he was blown off course on the way to India. He named the island St. Lawrence. Later in the 1500s the Portuguese, French, Dutch, and English all attempted to establish trading settlements in Madagascar. All of these failed due to hostile conditions and fierce fighting by local Malagasy warriors.
+                        </div>
+
+                            <picture>
+                                <source media="(min-width: 576px)" srcset="Images/Madagascar.jpg">
+                                <img src="Images/Madagascar.jpg" alt="Madagascar" id="history-img" class="pt-3 ">
+                            </picture>
+                        
+
+                        
+                    </div>
+                    
+                    <!-- Tab -->
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel">
+
+                        <!-- Text -->
+                        <div>
+                            Europeans first got a foothold on Madagascar in the late 1600s when pirates ruled the eastern coast of the island. These pirates used Madagascar as a base for attacking ships bringing goods back to Europe from India. In the 1700s, the French attempted to establish military positions on the east coast but again failed. By the early 19th century the only settlement the French could claim was the island of Sainte Marie. Meanwhile, during the 1700s, the Sakalavas of the western coast established the first kingdom of Madagascar. In 1810, their rivals, the Merina, established a kingdom over most of the rest of the island. Their king, Radama I, established relations with the British and opened the country to English missionaries who spread Christianity throughout the island and transcribed Malagasy into a written language. Under Radama's reign, a miniature Industrial revolution brought industry to the island. After Radama's death, he was succeeded by his widow, Ranavalona I, who terrorized the country for 33 years by persecuting Christians, evicting foreigners, executing political rivals, and reviving the custom of killing babies born on unlucky days. After her death, relations with Europe were restored.
+                        </div>
+                             <picture>
+                                <source media="(min-width: 576px)" srcset="Images/EarlyMad.jpg">
+                                <img src="Images/EarlyMad.jpg" alt="Madagascar"  id="history-img" class="pt-3">
+                            </picture>
+                    </div>
+
+                    <!-- Tab -->
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel">
+
+                        <!-- Text -->
+                        <div>
+                        In 1883, France invaded Madagascar and by 1896 had established rule over the island, which became a French colony. France used Madagascar as a source for timber and exotic spices, like vanilla. The Malagasy had two major uprisings against the French, in 1918 and 1947, but the country did not gain independence until June 26, 1960. In 1975, Didier Ratsiraka took control of the country. He ruled Madagascar as a dictator until he was overthrown in 1991 amid an economic collapse. He regained the presidency shortly thereafter and ruled until losing a contested election in 2001. The new president, Marc Ravalomanana, promised to bring democracy to the country. Having gotten his start selling yogurt on the streets from the back of his bicycle, Ravalomanana built a business empire and became Madagascar's richest man. As of 2005, he is still president and the economy continues to improve.
+                        </div>
+                         <picture>
+                                <source media="(min-width: 576px)" srcset="Images/ModernMAd.jpg">
+                                <img src="Images/ModernMAd.jpg" alt="Madagascar" id="history-img" class="pt-3">
+                        </picture>
+                    </div>
+
+                </div>
+
+            </div>
+            
+            <!--------------------------------- Vertical Tabs End --------------------------------->
+   <div class="container-fluid col-md-6 col-lg-4 col-xl-5 p-3">
+
+                <!--------------------------------- Accordion Important Peolple --------------------------------->
+
+                <!-- Accordion Didier -->
+                <div class="accordion" id="animal">
+                    <h2>Important People </h2>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="animal-heading1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
+                                Didier Ratsiraka
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#animal">
+                            <div class="accordion-body">
+                                <p>
+                                Didier Ignace Ratsiraka (4 November 1936 – 28 March 2021) was a Malagasy politician and naval officer who was President of Madagascar from 1975 to 1993 and from 1997 to 2002. At the time of his death, he was the longest-serving President of Madagascar. He was first appointed president in 1975 by the military leadership, he was then reelected twice in 1982 and 1989. While he lost to Albert Zafy in 1992, Ratsiraka returned to office after winning the 1997 election. After the 2001 election, he and his opponent Marc Ravalomanana engaged in a lengthy standoff after the latter refused to participate in a runoff election; Ratsiraka eventually stepped down.
+                                </p>
+                                <picture class="pt-3">
+                                    <source media="(min-width: 992px)" srcset="Images/DidierR.jpg">
+                                    <img src="Images/DidierR.jpg" alt="Didier Ratsiraka">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Diogo -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="animal-heading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo">
+                            Diogo Dias
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#animal">
+                            <div class="accordion-body">
+                                <p>
+                                Diogo Dias, also known as Diogo Gomes, was a 15th-century Portuguese explorer. He was the brother of Bartolomeu Dias and discovered some of the Cape Verde islands together with António Noli. In 1497 on the first Portuguese India Armadas expedition to India, Diogo Dias served as escrivão (clerk) aboard Vasco da Gama's flagship São Gabriel. Dias was one of the main conduits between Gama and the Zamorin of Calicut, and was briefly taken prisoner by the Zamorin when negotiations became contentious. In 1500, Diogo Dias accompanied the 2nd armada of Pedro Álvares Cabral as one of the captains of the fleet, with a commission to open trade at Sofala. Diogo Dias was one of the first to go ashore in the discovery of Brazil in April 1500. Famously, Dias is credited for breaking the ice with the wary Tupiniquim on the beach by jumping into an impromptu joyful dance to the accompaniment of Tupi pipes.
+                                </p>                            
+                                <picture class="pt-3">
+                                    <source media="(min-width: 992px)" srcset="Images/Diogo.jpg">
+                                    <img src="Images/Diogo.jpg" alt="Diogo">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Radama -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="animal-heading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree">
+                                Radama
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#animal">
+                            <div class="accordion-body">
+                                <p>
+                                    Radama I "the Great" (1793–1828) was the first Malagasy sovereign to be recognized as King of Madagascar (1810–1828) by a European state. He came to power at the age of 18 following the death of his father, King Andrianampoinimerina. Under Radama's rule and at his invitation, the first Europeans entered his central highland Kingdom of Imerina and its capital at Antananarivo. Radama encouraged these London Missionary Society envoys to establish schools to teach tradecraft and literacy to nobles and potential military and civil service recruits; they also introduced Christianity and taught literacy using the translated Bible. A wide range of political and social reforms were enacted under his rule, including an end to the international slave trade, which had historically been a key source of wealth and armaments for the Merina monarchy. Through aggressive military campaigns he successfully united two-thirds of the island under his rule. Abuse of alcohol weakened his health and he died prematurely at age 35. He was succeeded by his highest-ranking wife, Ranavalona I.
+                                </p>                             
+                                <picture class="pt-3">
+                                    <source media="(min-width: 992px)" srcset="Images/Radama.jpg">
+                                    <img src="Images/Radama.jpg" alt="Radama">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                     </div>
+                </div>
+                <!--------------------------------- Accordian Important People End --------------------------------->
+
+
+    <!--------------------------------- Footer --------------------------------->
+    <div id="footer" class="container-fluid d-flex flex-row justify-content-evenly m-0 p-3">
+        <div>Created by Kerrington & Cameron</div>
+        <div class="d-none d-md-block">
+            <nav>
+                <ul class="pagination pagination-sm align-self">
+                    <li class="page-item"><a class="page-link" href="index.html">Home</a></li>
+                    <li class="page-item"><a class="page-link" href="content1.html">1</a></li>
+                    <li class="page-item"><a class="page-link" href="content2.html">2</a></li>
+                    <li class="page-item"><a class="page-link" href="content3.html">3</a></li>
+                    <li class="page-item"><a class="page-link" href="content4.html">4</a></li>
+                    <li class="page-item"><a class="page-link" href="content5.html">5</a></li>
+                    <li class="page-item"><a class="page-link" href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div>Responsive Web Design - 13/12/21</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

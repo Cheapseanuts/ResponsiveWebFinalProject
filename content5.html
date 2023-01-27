@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<!--
+Created by Kerrington and Cameron
+Responsive Web Design, taught by Steve Monk
+NBCC Saint John, IT: Programmer Analyst 
+Due on Friday, December 13th, 2021
+-->
+<head>
+
+    <title>Mad for Madagascar</title>
+    <meta charset="utf-8">
+
+    <!-- Responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JS Link -->
+    <script src="script.js"></script>
+
+    <!-- Google font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="container-fluid p-0">
+
+    <!--------------------------------- Header and navigation system --------------------------------->
+    
+    <!-- Image Carousel Header -->
+    <div id="headerCarousel" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Menu Sidebar for offcanvas XS, SM, MD -->
+        <div class="offcanvas offcanvas-start d-block d-lg-none" id="menu">
+            <div class="offcanvas-header">
+                <h1 class="offcanvas-title">Menu</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <a href="index.html"><div>Home</div></a>
+                <a href="content1.html"><div>General Info</div></a>
+                <a href="content2.html"><div>Climate</div></a>
+                <a href="content3.html"><div>History</div></a>
+                <a href="content4.html"><div>Culture & Economy</div></a>
+                <a href="content5.html"><div>Places to See</div></a>
+                <a href="references.html"><div>References</div></a>
+            </div>
+        </div>
+
+        <!-- Carousel Images -->
+        <div class="carousel-inner container-fluid p-0">
+
+            <!-- Open Menu Button -->
+            <div class="container-fluid mt-3 d-block d-lg-none" id="menuButton">
+                <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu">
+                    <!-- Hamburger style menu icon -->
+                    <div class="hamburgerIcon"></div>
+                    <div class="hamburgerIcon"></div>
+                    <div class="hamburgerIcon"></div>
+                </button>
+            </div>
+
+            <!-- Logo -->
+            <div id="logo">
+                <img src="Images/mad_for_madagascar_solid.png" alt="Mad for Madagascar Logo">
+            </div>
+
+            <!-- Picture 1 -->
+            <div class="carousel-item active">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="Images/baobab_widescreen.jpg">
+                    <img src="Images/baobab.jpg" alt="Baobab Trees" class="d-block w-100">
+                </picture>
+            </div>
+            <!-- Picture 2 -->
+            <div class="carousel-item">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="Images/madagascar_cliffside_widescreen.jpg">
+                    <img src="Images/madagascar_cliffside.jpg" alt="Cliffside in Madagascar" class="d-block w-100">
+                </picture>
+            </div>
+            <!-- Picture 3 -->
+            <div class="carousel-item">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="Images/madagascar_coast_widescreen.jpg">
+                    <img src="Images/madagascar_coast.jpg" alt="Madagascar Coastline" class="d-block w-100">
+                </picture>
+            </div>
+        </div>
+    
+    </div>
+
+    <!--------------------------------- Page content --------------------------------->
+    <div id="bodyContent" class="container-fluid">
+        
+        <div class="row">
+            
+            <!-- Menu Sidebar for oncanvas LG -->
+            <div class="d-none d-lg-block col-lg-3 p-3" id="menu">
+                <div class="header">
+                    <h2 class="title">Menu</h2>
+                </div>
+                <div class="pt-2">
+                    <a href="index.html"><div>Home</div></a>
+                    <a href="content1.html"><div>General Info</div></a>
+                    <a href="content2.html"><div>Climate</div></a>
+                    <a href="content3.html"><div>History</div></a>
+                    <a href="content4.html"><div>Culture & Economy</div></a>
+                    <a href="content5.html"><div>Places to See</div></a>
+                    <a href="references.html"><div>References</div></a>
+                </div>
+            </div>
+
+            <!-- Center Page Content -->
+            <div class="col-md-6 col-lg-5 mt-3">
+
+                <h2>Famous Land Marks</h2>
+                
+                <div class="card p-0 mt-2">
+                    <img src="Images/queens_palace.jpg" class="card-img-top" id="imgCard" alt="Ile Sainte Marie">
+                    <div class="card-body">
+                        <h2>Queen's Palace</h2>
+                        <p class="card-text">
+                        The Queen's Palace at Antananarivo was built for Queen Ranavalona in the 17th century. She was referred to as the "Wicked Queen" and "Bloody Mary of Madagascar" due to the viciousness with which she punished missionaries and executed her own subjects. The palace itself, locally known as Manjakamiadana, is the largest of several buildings in the royal complex, although much of it burned down in 1995 after an accidental fire broke out. Much of the stone facade has since been restored, while several royal artifacts saved from the fire are housed inside.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card p-0 mt-2">
+                    <img src="Images/nosy_be.jpeg" class="card-img-top" id="imgCard" alt="Ile Sainte Marie">
+                    <div class="card-body">
+                        <h2>Nosy de Archipelago</h2>
+                        <p class="card-text">
+                        The Nosy de Archipelago is a group of Indian Ocean resort islands off the northwest coast of Madagascar with year-round temperatures of about 80 degrees F. Nosy Be itself is the largest of these islands, offering sugar-white beaches like Andilana and Amporaha where vacationers can swim, sail and sunbathe. The smaller neighboring islands of Nosy Iranja and Nosy Mitsio also boast their own beaches, with Tsarabanjina on the latter island among the most fashionable. In addition, the island of Nosy Tanikely features a marine reserve offering world-renowned snorkeling and scuba diving.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card mt-2">
+                    <img src="Images/tsingy_de_bemaraha.jpg" class="card-img-top" id="imgCard" alt="Ile Sainte Marie">
+                    <div class="card-body">
+                        <h2>Tsingy de Bemaraha</h2>
+                        <p class="card-text">
+                        The Tsingy de Bemaraha Reserve lies in the southern region of Madagascar’s largest natural reserve, Tsingy de Bemaraha Strict Nature Reserve. The word “tsingy” refers to the pinnacles that dot the park’s limestone plateau. Located near the country’s west coast, the park features a broad expanse of mangrove forest. The park is home to seven lemur species, including the Deckens sifaka, a genus of lemur notable for its creamy white fur and black face.
+                        </p>
+                    </div>
+                </div>
+
+            </div>    
+
+            <!-- Cards filling the right side -->
+            <div id="national-symbols" class="col-md-6 col-lg-4 mt-3">
+
+                <h2>Sites to See</h2>
+
+                <div class="card p-0 mt-2">
+                    <img src="Images/ile_sainte_marie.jpg" class="card-img-top" id="imgCard" alt="Ile Sainte Marie">
+                    <div class="card-body">
+                        <h2>Ile Sainte Marie</h2>
+                        <p class="card-text">
+                        The Ile Sainte Marie lies off the east coast of Madagascar. The island’s array of protected bays and inlets drew pirates to Ile Sainte Marie during the 17th and 18th centuries, and the wrecks of several pirate ships can still be viewed from the shallow waters of the Baie des Forbans. Today the island is one of the top tourist attractions in Madagascar.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card p-0 mt-2">
+                    <img src="Images/avenue_baobabs.jpg" class="card-img-top" id="imgCard"  alt="Avenue of Boababs">
+                    <div class="card-body">
+                        <h2>Avenue of the Baobabs</h2>
+                        <p class="card-text">
+                        The Avenue of the Baobabs is a group of trees lining the dirt road between Morondava and Belon’i Tsiribihina in western Madagascar. Its striking landscape draws tourists from around the world, making it one of the most visited locations in the region.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card p-0 mt-2">
+                    <img src="Images/royal_hill.jpg" class="card-img-top" id="imgCard"  alt="Royal Hill">
+                    <div class="card-body">
+                        <h2>Royal Hill Ambohimanga</h2>
+                        <p class="card-text">
+                        Considered one of the country’s most sacred spots by the Malagasy people for 500 years, the Royal Hill of Ambohimanga is a historical village that was once home to Madagascar royalty.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+    
+        </div>
+
+        </div>
+
+    </div>
+
+    <!--------------------------------- Footer --------------------------------->
+    <div id="footer" class="container-fluid d-flex flex-row justify-content-evenly m-0 mt-3 p-3">
+        <div>Created by Kerrington & Cameron</div>
+        <div class="d-none d-md-block">
+            <nav>
+                <ul class="pagination pagination-sm align-self">
+                    <li class="page-item"><a class="page-link" href="index.html">Home</a></li>
+                    <li class="page-item"><a class="page-link" href="content1.html">1</a></li>
+                    <li class="page-item"><a class="page-link" href="content2.html">2</a></li>
+                    <li class="page-item"><a class="page-link" href="content3.html">3</a></li>
+                    <li class="page-item"><a class="page-link" href="content4.html">4</a></li>
+                    <li class="page-item"><a class="page-link" href="content5.html">5</a></li>
+                    <li class="page-item"><a class="page-link" href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div>Responsive Web Design - 13/12/21</div>
+    </div>
+
+</div>
+</body>
+
+</html>

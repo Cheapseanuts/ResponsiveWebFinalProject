@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<!--
+Created by Kerrington and Cameron
+Responsive Web Design, taught by Steve Monk
+NBCC Saint John, IT: Programmer Analyst 
+Due on Friday, December 13th, 2021
+-->
+<head>
+
+    <title>Mad for Madagascar</title>
+    <meta charset="utf-8">
+
+    <!-- Responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JS Link -->
+    <script src="script.js"></script>
+
+    <!-- Google font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="container-fluid p-0">
+
+    <!--------------------------------- Header and navigation system --------------------------------->
+    
+    <!-- Image Carousel Header -->
+    <div id="headerCarousel" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Menu Sidebar for offcanvas XS, SM, MD -->
+        <div class="offcanvas offcanvas-start d-block d-lg-none" id="menu">
+            <div class="offcanvas-header">
+                <h1 class="offcanvas-title">Menu</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <a href="index.html"><div>Home</div></a>
+                <a href="content1.html"><div>General Info</div></a>
+                <a href="content2.html"><div>Climate</div></a>
+                <a href="content3.html"><div>History</div></a>
+                <a href="content4.html"><div>Culture & Economy</div></a>
+                <a href="content5.html"><div>Places to See</div></a>
+                <a href="references.html"><div>References</div></a>
+            </div>
+        </div>
+
+        <!-- Carousel Images -->
+        <div class="carousel-inner container-fluid p-0">
+
+            <!-- Open Menu Button -->
+            <div class="container-fluid mt-3 d-block d-lg-none" id="menuButton">
+                <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu">
+                    <!-- Hamburger style menu icon -->
+                    <div class="hamburgerIcon"></div>
+                    <div class="hamburgerIcon"></div>
+                    <div class="hamburgerIcon"></div>
+                </button>
+            </div>
+
+            <!-- Logo -->
+            <div id="logo">
+                <img src="Images/mad_for_madagascar_solid.png" alt="Mad for Madagascar Logo">
+            </div>
+
+            <!-- Picture 1 -->
+            <div class="carousel-item active">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="Images/baobab_widescreen.jpg">
+                    <img src="Images/baobab.jpg" alt="Baobab Trees" class="d-block w-100">
+                </picture>
+            </div>
+            <!-- Picture 2 -->
+            <div class="carousel-item">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="Images/madagascar_cliffside_widescreen.jpg">
+                    <img src="Images/madagascar_cliffside.jpg" alt="Cliffside in Madagascar" class="d-block w-100">
+                </picture>
+            </div>
+            <!-- Picture 3 -->
+            <div class="carousel-item">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="Images/madagascar_coast_widescreen.jpg">
+                    <img src="Images/madagascar_coast.jpg" alt="Madagascar Coastline" class="d-block w-100">
+                </picture>
+            </div>
+        </div>
+    
+    </div>
+
+    <!--------------------------------- Page content --------------------------------->
+    <div id="bodyContent" class="container-fluid">
+        
+        <div class="row">
+            <!-- Menu Sidebar for oncanvas LG -->
+            <div class="d-none d-lg-block col-lg-3 p-3" id="menu">
+                
+                <div class="header">
+                    <h2 class="title">Menu</h2>
+                </div>
+                <div class="pt-2">
+                    <a href="index.html"><div>Home</div></a>
+                    <a href="content1.html"><div>General Info</div></a>
+                    <a href="content2.html"><div>Climate</div></a>
+                    <a href="content3.html"><div>History</div></a>
+                    <a href="content4.html"><div>Culture & Economy</div></a>
+                    <a href="content5.html"><div>Places to See</div></a>
+                    <a href="references.html"><div>References</div></a>
+                </div>
+            </div>
+            
+        <!-- Your content goes here -->
+            <div class="col-md-6 col-lg-8 p-3" id="history">
+                <h2>Culture/Economy</h2>
+                <ul class="nav nav-pills mb-3 d-block d-sm-block d-md-none d-lg-none d-xl-none" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-Culture-tab" data-bs-toggle="pill" data-bs-target="#pills-Culture" type="button" role="tab">Culture</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-Religion-tab" data-bs-toggle="pill" data-bs-target="#pills-Religion" type="button" role="tab">Religion</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-Economy-tab" data-bs-toggle="pill" data-bs-target="#pills-Economy" type="button" role="tab">Economy</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="pills-tabContent">
+
+                    <!-- Tab -->
+                    <div class="tab-pane fade show active d-md-none d-lg-none d-xl-none" id="pills-Culture" role="tabpanel">
+
+                        <!-- Text -->
+                        <div>
+                               <h3>Sports:</h3>
+                                Moraingy, an indigenous hand-to-hand combat game is popular in the coastal regions of Madagascar. Zebu wrestling is also practiced in the rural areas of the country. Fanorona is a board game that is extremely popular in the highlands of Madagascar. A large number of Western sports are also played here. Rugby is regarded as the nation’s national sports. Football is also played here. The French game of Pétanque is played widely in the highlands and urban areas of Madagascar and the country has even produced a world champion in the game. The country first competed in the Olympic Games in 1964. Some schools in the country offer to teach a number of sports like soccer, judo, basketball, tennis, boxing, etc., to the students.
+                        </div>
+
+                    </div>
+                    
+                    <!-- Tab -->
+                    <div class="tab-pane fade d-md-none d-lg-none d-xl-none" id="pills-Religion" role="tabpanel">
+
+                        <!-- Text -->
+                        <div>
+                            <h3>Religion:</h3>
+                            Religion: The remaining population of Madagascar is mostly composed of Christians. The religion spread in the country after the arrival of the Christian missionaries in 1818. The reigning Queen Ranavalona I did not support the spread of the religion and persecuted the converts but her heir, Queen Ranavalona II was a strict adherent of Christianity and under her rule, the religion flourished in Madagascar. Today, most Christians in the country integrate the traditional religion with modern Christianity and continue to perform ancestral worship. Islam is another religion practiced by a significant minority in Madagascar. The religion was introduced by the Arabs and Somali traders in the Middle Ages. The religion, however, failed to spread inland and followers of Islam are primarily restricted to the Antsiranana and Mahajanga provinces of the country. About 7% of the population of Madagascar practice Islam. Hinduism has also been introduced in the country by the Gujarati merchants who settled there for trade. Christian festivals are celebrated with great pomp and glory in Madagascar. Secular holidays observed here include the Memorial Day on March 29 in memory of those who sacrificed their lives in the 1949 French Malagasy War and the Labor Day on the third Thursday in the month of May. Women rights and freedoms are recognized on the International Women's Day. The country’s independence from French rule is celebrated on June 26. The Celebration of the Dead, a day devoted to the ancestors, is observed on November 1.
+                        </div>
+        
+                    </div>
+               
+
+                
+                    <div class="tab-pane fade d-md-none d-lg-none d-xl-none " id="pills-Economy" role="tabpanel">
+
+                        <!-- Text -->
+                        <div>
+                            <h3>Economy:</h3>
+                            Madagascar’s economic freedom score is 57.7, making its economy the 112th freest in the 2021 Index. Its overall score has decreased by 2.8 points, primarily because of a decline in judicial effectiveness. Madagascar is ranked 17th among 47 countries in the Sub-Saharan Africa region, and its overall score is above the regional average but below the world average. This year, Madagascar’s economy sank back into the ranks of the mostly unfree, which is not encouraging for a country that is among the poorest in the world. To achieve greater economic freedom, the government would have to reduce the fiscal risks of its state-owned electricity and water utilities, strengthen the rule of law, make the labor market more flexible, and establish political stability.
+                        </div>
+                </div>
+                </div>
+                    <!-------- End of Tab Panes -------->
+                    
+                    <div>
+                    <!-- Large Screen Displays All Text At Once-->
+                        <div class="d-none d-sm-none d-md-block d-lg-block">
+                            <h3 id="screenFull">Sports:</h3>
+                            <img class="d-none d-sm-none d-md-block" id="imgFour" src="Images/Moraingy.jpg">
+                            Moraingy, an indigenous hand-to-hand combat game is popular in the coastal regions of Madagascar. Zebu wrestling is also practiced in the rural areas of the country. Fanorona is a board game that is extremely popular in the highlands of Madagascar. A large number of Western sports are also played here. Rugby is regarded as the nation’s national sports. Football is also played here. The French game of Pétanque is played widely in the highlands and urban areas of Madagascar and the country has even produced a world champion in the game. The country first competed in the Olympic Games in 1964. Some schools in the country offer to teach a number of sports like soccer, judo, basketball, tennis, boxing, etc., to the students.
+                        </div>
+                            
+                        <br>
+
+                        <div class="d-none d-sm-none d-md-block d-lg-block">
+                            <h3 id="screenFull">Religion:</h3>
+                            <img class="d-none d-sm-none d-md-block" id="imgFour" src="Images/Religion.jpg">
+                            The remaining population of Madagascar is mostly composed of Christians. The religion spread in the country after the arrival of the Christian missionaries in 1818. The reigning Queen Ranavalona I did not support the spread of the religion and persecuted the converts but her heir, Queen Ranavalona II was a strict adherent of Christianity and under her rule, the religion flourished in Madagascar. Today, most Christians in the country integrate the traditional religion with modern Christianity and continue to perform ancestral worship. Islam is another religion practiced by a significant minority in Madagascar. The religion was introduced by the Arabs and Somali traders in the Middle Ages. The religion, however, failed to spread inland and followers of Islam are primarily restricted to the Antsiranana and Mahajanga provinces of the country. About 7% of the population of Madagascar practice Islam. Hinduism has also been introduced in the country by the Gujarati merchants who settled there for trade. Christian festivals are celebrated with great pomp and glory in Madagascar. Secular holidays observed here include the Memorial Day on March 29 in memory of those who sacrificed their lives in the 1949 French Malagasy War and the Labor Day on the third Thursday in the month of May. Women rights and freedoms are recognized on the International Women's Day. The country’s independence from French rule is celebrated on June 26. The Celebration of the Dead, a day devoted to the ancestors, is observed on November 1.
+                        </div>
+                    
+                        <br>
+                    
+                        <div class="d-none d-sm-none d-md-block d-lg-block ">
+                            <h3 id="screenFull">Economy:</h3>
+                            <img class="d-none d-sm-none d-md-block" id="imgFour" src="Images/madagascar-currency.jpg">
+                            Madagascar’s economic freedom score is 57.7, making its economy the 112th freest in the 2021 Index. Its overall score has decreased by 2.8 points, primarily because of a decline in judicial effectiveness. Madagascar is ranked 17th among 47 countries in the Sub-Saharan Africa region, and its overall score is above the regional average but below the world average. This year, Madagascar’s economy sank back into the ranks of the mostly unfree, which is not encouraging for a country that is among the poorest in the world. To achieve greater economic freedom, the government would have to reduce the fiscal risks of its state-owned electricity and water utilities, strengthen the rule of law, make the labor market more flexible, and establish political stability.
+
+                        </div>
+                        </div>
+                    
+
+                </div>
+            
+            
+            </div>
+        </div>
+
+    <!--------------------------------- Footer --------------------------------->
+    <div id="footer" class="container-fluid d-flex flex-row justify-content-evenly m-0 p-3">
+        <div>Created by Kerrington & Cameron</div>
+        <div class="d-none d-md-block">
+            <nav>
+                <ul class="pagination pagination-sm align-self">
+                    <li class="page-item"><a class="page-link" href="index.html">Home</a></li>
+                    <li class="page-item"><a class="page-link" href="content1.html">1</a></li>
+                    <li class="page-item"><a class="page-link" href="content2.html">2</a></li>
+                    <li class="page-item"><a class="page-link" href="content3.html">3</a></li>
+                    <li class="page-item"><a class="page-link" href="content4.html">4</a></li>
+                    <li class="page-item"><a class="page-link" href="content5.html">5</a></li>
+                    <li class="page-item"><a class="page-link" href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div>Responsive Web Design - 13/12/21</div>
+    </div>
+
+</div>
+</body>
+
+</html>
