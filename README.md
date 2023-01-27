@@ -1,11 +1,6 @@
 # final-project
 Responsive web design final project
 --------------------
-Task List:
-Logo - Cherubim
-Kerrington - index, content1, content2, references
-Cameron - content3, content4, content5
---------------------
 
 Fonts
 font-family: 'Zen Kaku Gothic Antique', sans-serif;
@@ -15,15 +10,15 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif;
 Intructions
 Your website must have information in all of the following categories, as well as any other information you wish:
 History - country history, biography of a famous leader, description of an important event, etc.
-DONE - Location - world location, country size, borders, etc.
+Location - world location, country size, borders, etc.
 Important Cities or Regions
 Demographics - population, ethnic groups, religious groups, language groups, etc.
-DONE - Climate - weather patterns, seasons, temperatures, etc.
+Climate - weather patterns, seasons, temperatures, etc.
 Famous Landmarks/Sites
-DONE - Date and Time - time zones, holidays, etc.
-DONE - National Symbols - flags, animals, flowers, etc.
+Date and Time - time zones, holidays, etc.
+National Symbols - flags, animals, flowers, etc.
 Famous People - politicians, entertainers, writers, etc.
-DONE - Natural Features - forests, rivers, deserts, mountains, etc.
+Natural Features - forests, rivers, deserts, mountains, etc.
 Culture - music, art, dance, cuisine, crafts, traditional vocations, etc.
 Economy - main industries, trading partners, DONE currency, etc.
 
@@ -37,27 +32,27 @@ Economy - main industries, trading partners, DONE currency, etc.
 7. references
 
 You don’t have to organize your site according to the twelve types of content listed above; it can be any organization you want.
-DONE - There must be at least five pages.
-DONE - There must be a consistent navigation scheme on all pages.
-DONE - All pages should use a consistent design scheme - colours, graphics, lines, etc. - so that userS always know they're on your site.
-DONE - At least one page should contain a large amount of text.
-DONE - At least one page should contain an image slideshow.
+There must be at least five pages.
+There must be a consistent navigation scheme on all pages.
+All pages should use a consistent design scheme - colours, graphics, lines, etc. - so that userS always know they're on your site.
+At least one page should contain a large amount of text.
+At least one page should contain an image slideshow.
 
-DONE - Your site must be designed for at least three screen sizes: mobile (small), tablet (medium), and desktop (large). The site content must automatically adjust to changing screen sizes.
+Your site must be designed for at least three screen sizes: mobile (small), tablet (medium), and desktop (large). The site content must automatically adjust to changing screen sizes.
 
 In addition, you should implement responsive typography, responsive image sizes, and other sizing/layout features that we have learned about in this course. (For example, don’t clutter up the mobile screen with a sidebar; use a drop-down or slide-out instead.)
 
 Your site must incorporate each of the following Bootstrap components:
-DONE - Navigation Panel(s)
-DONE - Slideshow/Carousel
-DONE - Cards
-Kinda DONE - Responsive Typography
-DONE - Responsive Images
+Navigation Panel(s)
+Slideshow/Carousel
+Cards
+Responsive Typography
+Responsive Images
 Drop-down Lists
-DONE - Tooltips
-DONE - Collapsible Content
+Tooltips
+Collapsible Content
 
-Due date 1: DONE
+Due date 1:
 Country Choice and Team Members
 Mockups of your site’s pages. Show the general layout idea for three of your pages in the the three required sizes (nine mockups in total).
 Sample of one of the required Bootstrap components.
